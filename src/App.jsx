@@ -1,6 +1,7 @@
 import Navbar from './Navbar';
 import MainContent from './MainContent';
 import './App.css'
+import Discord from './Discord';
 
 function App() {
 
@@ -8,6 +9,7 @@ function App() {
     <>
       <Navbar />
       <MainContent />
+      <Discord />
     </>
   )
 }

@@ -5,7 +5,7 @@ import './MainContent.css'
 function MainContent() {
     return (
         <>
-            <div className=".container-fluid">
+            <div className="container-fluid">
                 <div className="background-container">
                     <video autoPlay loop muted className="background-video">
                         <source src={storm} type="video/webm" />

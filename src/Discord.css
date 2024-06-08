@@ -1,0 +1,19 @@
+.discordContainer {
+    background-image: url('discordBackground.png');
+    background-size: cover; /* Esto hace que la imagen cubra todo el contenedor */
+    background-position: center; /* Esto centra la imagen en el contenedor */
+    display: flex;
+    flex-direction: column; /* Hace que los elementos se apilen verticalmente */
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    height: 100vh; /* Ajusta la altura del contenedor si es necesario */
+}
+
+.discordContainer h1 {
+margin-bottom: 2rem;  
+}
+
+.discordIframe {
+    width: 35rem;
+    height: 40rem;
+}
