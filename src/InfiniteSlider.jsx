@@ -18,17 +18,16 @@ const slides = [
 
 function InfiniteSlider() {
     const duplicatedSlides = [...slides, ...slides];
-    const totalSlides = duplicatedSlides.length;
 
     return (
         <div className="infinite-slider-container">
             <motion.div
                 className="infinite-slider-inner"
                 animate={{
-                    x: [0, -100 * (totalSlides / slides.length) + '%'],
+                    x: ['0%', '-100%'],
                     transition: {
                         ease: 'linear',
-                        duration: 20,
+                        duration: 15,
                         repeat: Infinity,
                     }
                 }}
