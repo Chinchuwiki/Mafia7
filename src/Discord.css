@@ -1,19 +1,24 @@
 .discordContainer {
     background-image: url('discordBackground.png');
-    background-size: cover; /* Esto hace que la imagen cubra todo el contenedor */
-    background-position: center; /* Esto centra la imagen en el contenedor */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    /* Altura completa de la pantalla */
     display: flex;
-    flex-direction: column; /* Hace que los elementos se apilen verticalmente */
-    justify-content: center; /* Centra verticalmente */
-    align-items: center; /* Centra horizontalmente */
-    height: 100vh; /* Ajusta la altura del contenedor si es necesario */
+    justify-content: center;
+    align-items: center;
 }
 
-.discordContainer h1 {
-margin-bottom: 2rem;  
+.contentContainer {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    /* Fondo semi-transparente para mejor visibilidad del texto */
+    padding: 2rem;
+    border-radius: 1rem;
 }
 
 .discordIframe {
-    width: 35rem;
+    width: 100%;
     height: 40rem;
+    max-width: 35rem;
 }
