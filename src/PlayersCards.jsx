@@ -1,66 +1,124 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import './PlayersCards.css';
 
-function PlayersCards() {
+const items = [
+    { id: 1, title: 'Player 1', subtitle: 'Details of player 1' },
+    { id: 2, title: 'Player 2', subtitle: 'Details of player 2' },
+    { id: 3, title: 'Player 3', subtitle: 'Details of player 3' },
+    { id: 4, title: 'Player 4', subtitle: 'Details of player 4' }
+];
+
+const PlayersCards = () => {
     const [selectedId, setSelectedId] = useState(null);
-    let items = [
-        {
-            "id": 1,
-            "subtitle": "Nolose",
-            "title": "queseyo"
-        },
-        {
-            "id": 2,
-            "subtitle": "Nolose",
-            "title": "queseyo"
-        },
-        {
-            "id": 3,
-            "subtitle": "Nolose",
-            "title": "queseyo"
-        },
-        {
-            "id": 4,
-            "subtitle": "Nolose",
-            "title": "queseyo"
-        },
-        {
-            "id": 5,
-            "subtitle": "Nolose",
-            "title": "queseyo"
-        },
-    ];
-
-    const selectedItem = items.find(item => item.id === selectedId);
 
     return (
-        <div className='container-fluid'>
-            {items.map(item => (
-                <motion.div
-                    className="card-body bg-primary"
-                    key={item.id}
-                    layoutId={item.id.toString()}
-                    onClick={() => setSelectedId(item.id)}
-                >
-                    <motion.h5 className="card-title">{item.subtitle}</motion.h5>
-                    <motion.p className="card-text">{item.title}</motion.p>
-                </motion.div>
-            ))}
+        <div className="container">
+            <div className="row mt-4 mb-4" >
+                <div className="col">
+                    <motion.div
+                        layoutId={1}
+                        onClick={() => setSelectedId(1)}
+                        className="card h-100 p-3"
+                        whileHover={{ scale: 0.9 }}
+                        style={{ cursor: 'pointer', backgroundColor: '#f8f9fa' }}
+                    >
+                        <h2>AVASCK</h2>
+                        <h5>ESTAS COSAS SUELEN PASAR CON TODO LO QUE DECIS</h5>
+                    </motion.div>
+                </div>
+
+                <div className="col">
+                    <motion.div
+                        layoutId={2}
+                        onClick={() => setSelectedId(2)}
+                        className="card h-100 p-3"
+                        whileHover={{ scale: 0.9 }}
+                        style={{ cursor: 'pointer', backgroundColor: '#f8f9fa' }}
+                    >
+                        <h2>AYATO</h2>
+                        <h5>ESTAS COSAS SUELEN PASAR CON AYATO</h5>
+                    </motion.div>
+                </div>
+            </div>
+
+            <div className="row mt-4 mb-4">
+                <div className="col">
+                    <motion.div
+                        layoutId={3}
+                        onClick={() => setSelectedId(3)}
+                        className="card h-100 p-3"
+                        whileHover={{ scale: 0.9 }}
+                        style={{ cursor: 'pointer', backgroundColor: '#f8f9fa' }}
+                    >
+                        <h2>BLASTEX56</h2>
+                        <h5>ESTAS COSAS SUELEN PASAR CON AYATO</h5>
+                    </motion.div>
+                </div>
+
+                <div className="col">
+                    <motion.div
+                        layoutId={4}
+                        onClick={() => setSelectedId(4)}
+                        className="card h-100 p-3"
+                        whileHover={{ scale: 0.9 }}
+                        style={{ cursor: 'pointer', backgroundColor: '#f8f9fa' }}
+                    >
+                        <h2>CRISR13</h2>
+                        <h5>ESTAS COSAS SUELEN PASAR CON TODO LO QUE DECIS</h5>
+
+                    </motion.div>
+                </div>
+
+                <div className="col">
+                    <motion.div
+                        layoutId={5}
+                        onClick={() => setSelectedId(5)}
+                        className="card h-100 p-3"
+                        whileHover={{ scale: 0.9 }}
+                        style={{ cursor: 'pointer', backgroundColor: '#f8f9fa' }}
+                    >
+
+                        <h2>FEDERECK</h2>
+                        <h5>ESTAS COSAS SUELEN PASAR CON AYATO</h5>
+                    </motion.div>
+                </div>
+            </div>
+
+            <div className="row mt-4 mb-4">
+                <div className="col">
+                    <motion.div
+                        layoutId={6}
+                        onClick={() => setSelectedId(6)}
+                        className="card h-100 p-3"
+                        whileHover={{ scale: 0.9 }}
+                        style={{ cursor: 'pointer', backgroundColor: '#f8f9fa' }}
+                    >
+                        <h2>CHINCHUWIKI</h2>
+                        <h5>ESTAS COSAS SUELEN PASAR CON TODO LO QUE DECIS</h5>
+                    </motion.div>
+                </div>
+            </div>
 
             <AnimatePresence>
                 {selectedId && (
-                    <motion.div className="card-body bg-danger" layoutId={selectedId.toString()}>
-                        <motion.h5 className="card-title">{selectedItem.subtitle}</motion.h5>
-                        <motion.p className="card-text">{selectedItem.title}</motion.p>
-                        <motion.button onClick={() => setSelectedId(null)}>
+                    <motion.div
+                        layoutId={selectedId}
+                        className="card p-3 position-absolute top-50 start-50 translate-middle"
+                        style={{ backgroundColor: '#f8f9fa' }}
+                    >
+                        <motion.button
+                            onClick={() => setSelectedId(null)}
+                            className="btn btn-primary mt-3"
+                        >
                             Close
                         </motion.button>
+                        <h2>{items.find(item => item.id === selectedId).title}</h2>
+                        <h5>{items.find(item => item.id === selectedId).subtitle}</h5>
                     </motion.div>
                 )}
             </AnimatePresence>
         </div>
     );
-}
+};
 
 export default PlayersCards;

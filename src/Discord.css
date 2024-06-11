@@ -1,9 +1,4 @@
 .discordContainer {
-    background-image: url('discordBackground.png');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    /* Altura completa de la pantalla */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,8 +6,6 @@
 
 .contentContainer {
     text-align: center;
-    background: rgba(0, 0, 0, 0.5);
-    /* Fondo semi-transparente para mejor visibilidad del texto */
     padding: 2rem;
     border-radius: 1rem;
 }

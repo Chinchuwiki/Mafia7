@@ -1,4 +1,5 @@
 import './App.css'
+import Footer from './Footer';
 import Navbar from './Navbar';
 import Discord from './Discord';
 import MainContent from './MainContent';
@@ -14,6 +15,7 @@ function App() {
       <InfiniteSlider />
       <PlayersCards />
       <Discord />
+      <Footer />
     </>
   )
 }

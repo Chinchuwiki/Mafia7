@@ -35,7 +35,7 @@ function InfiniteSlider() {
                 {duplicatedSlides.map((slide, index) => (
                     <div key={index} className="infinite-slider-slide">
                         <div className="infinite-slider-content">
-                            <img src={slide.player} alt={`Slide ${index}`} />
+                            <img src={slide.player} alt={`Slide ${index}`} className="img-fluid" />
                         </div>
                     </div>
                 ))}

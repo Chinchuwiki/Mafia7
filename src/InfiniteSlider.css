@@ -7,13 +7,16 @@
 
 .infinite-slider-inner {
     display: flex;
-    width: 150%; /* Duplicamos la anchura para acomodar los slides duplicados */
+    width: 200%;
     height: 100%;
 }
 
 .infinite-slider-slide {
     flex-shrink: 0;
     width: 16.6667%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .infinite-slider-content {
